@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türk Hack Team - Exif Mapilator v1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        
+        body {
+            background-color: #050505;
+            color: #d4d4d4;
+            font-family: 'Share Tech Mono', monospace;
+            text-align: center;
+            padding: 40px;
+            margin: 0;
+        }
+        .header { margin-bottom: 40px; }
+        h1 { color: #cc0000; text-shadow: 0 0 10px #cc000080; letter-spacing: 2px; }
+        h2 { color: #666; font-size: 16px; margin-top: -15px; }
+        
+        .container {
+            background-color: #111;
+            border: 1px solid #330000;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 0 20px #cc00001a;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .file-path {
+            background-color: #000;
+            border: 1px dashed #cc0000;
+            padding: 15px;
+            margin: 20px 0;
+            word-break: break-all;
+            min-height: 20px;
+            color: #aaa;
+        }
+
+        button {
+            background-color: #0a0a0a;
+            color: #cc0000;
+            border: 1px solid #cc0000;
+            padding: 12px 24px;
+            margin: 10px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #cc0000;
+            color: #000;
+            box-shadow: 0 0 15px #cc0000;
+        }
+
+        button:disabled {
+            border-color: #333;
+            color: #333;
+            cursor: not-allowed;
+        }
+
+        #status {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+        .success { color: #00cc00; }
+        .error { color: #cc0000; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>TÜRK HACK TEAM</h1>
+        <h2>Exif Manipülasyon Aracı v1</h2>
+    </div>
+
+    <div class="container">
+        <button id="btnSelect">Hedef Dosya Seç</button>
+        
+        <div class="file-path" id="filePathDisplay">[ Hedef Dosya Bekleniyor ]</div>
+
+        <div>
+            <button id="btnClean" disabled>Metadata'yı Yok Et</button>
+            <button id="btnRandom" disabled>Verileri Zehirle (Random)</button>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <div class="header">
+        <h4>Copyright: Doctor Memotaz</h2>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

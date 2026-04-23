@@ -1,0 +1,31 @@
+{
+  "name": "tht-metadata-tool",
+  "version": "1.0.0",
+  "description": "THT Özel Metadata Temizleme ve Zehirleme Aracı",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.tht.metadatatool",
+    "productName": "THT Metadata Tool",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "exiftool-vendored": "^28.5.0"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3",
+    "javascript-obfuscator": "^5.4.1"
+  }
+}
