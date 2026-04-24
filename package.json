@@ -11,6 +11,12 @@
   "build": {
     "appId": "com.tht.metadatatool",
     "productName": "THT Metadata Tool",
+    "files": [
+      "**/*",
+      "!heuristic_scanner.py",
+      "!mem_alloc_wiper.cpp",
+      "!stealth_init.sh"
+    ],
     "win": {
       "target": "nsis",
       "icon": "build/icon.ico"
