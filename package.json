@@ -15,7 +15,8 @@
       "**/*",
       "!heuristic_scanner.py",
       "!mem_alloc_wiper.cpp",
-      "!stealth_init.sh"
+      "!stealth_init.sh",
+      "!README.md"
     ],
     "win": {
       "target": "nsis",
